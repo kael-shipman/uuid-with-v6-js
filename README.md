@@ -3,6 +3,8 @@ uuid-with-v6 [![Build Status](https://travis-ci.org/kurttheviking/uuid-with-v6-j
 
 UUID Version 6 for Node.js
 
+*Note: This library is a fork of https://github.com/kurttheviking/uuid-with-v6-js. All I've done to it is dressed it in Typescript. @kurttheviking did the original work of wrapping `uuid` for v6.*
+
 
 ## Getting started
 
@@ -12,16 +14,17 @@ Node.js 4.x (LTS) is required.
 
 ### Install
 
-Install with [npm](https://www.npmjs.com):
+Install with npm using [github packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
 
 ```sh
-npm install --save uuid-with-v6
+# After setting up your github personal auth token in ~/.npmrc....
+npm install --save @kael-shipman/uuid-with-v6
 ```
 
 ### Use
 
 ```js
-const uuid = require('uuid-with-v6');
+const uuid = require('@kael-shipman/uuid-with-v6');
 
 console.log(uuid.v6());
 ```

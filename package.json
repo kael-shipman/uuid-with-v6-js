@@ -1,5 +1,5 @@
 {
-  "name": "uuid-with-v6",
+  "name": "@kael-shipman/uuid-with-v6",
   "version": "2.0.0",
   "description": "UUID Version 6",
   "main": "./dist/index.js",
@@ -9,14 +9,15 @@
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly ./test/unit -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "coverage": "./node_modules/istanbul/lib/cli.js cover --report=json-summary --report=html _mocha ./test/unit -- --recursive",
     "test": "node node_modules/mocha/bin/mocha ./test --recursive",
-    "test-unit": "node node_modules/mocha/bin/mocha ./test/unit --recursive"
+    "test-unit": "node node_modules/mocha/bin/mocha ./test/unit --recursive",
+    "prepublishOnly": "rm -Rf dist; npx -p typescript tsc"
   },
   "engines": {
     "node": ">4.x"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kurttheviking/uuid-with-v6-js.git"
+    "url": "git+https://github.com/kael-shipman/uuid-with-v6-js.git"
   },
   "keywords": [
     "uuid",
@@ -32,9 +33,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kurttheviking/uuid-with-v6-js/issues"
+    "url": "https://github.com/kael-shipman/uuid-with-v6-js/issues"
   },
-  "homepage": "https://github.com/kurttheviking/uuid-with-v6-js#readme",
+  "homepage": "https://github.com/kael-shipman/uuid-with-v6-js#readme",
   "dependencies": {
     "@types/uuid": ">=3.1.0",
     "@types/node": "^6.0.0 || ^8.0.0 || ^10.0.0 || ^12.0.0 || ^14.0.0",
@@ -57,6 +58,7 @@
     "shortid": "2.2.8",
     "sinon": "1.17.7",
     "ulid": "0.1.0",
-    "uniqid": "4.1.1"
+    "uniqid": "4.1.1",
+    "typescript": ">=3.0.0"
   }
 }
